@@ -8,5 +8,8 @@
 # f.close
 
 # inject方法用来进行统计
+# 在执行inject方法时，会将inject方法的参数传递进block中的第一个参数
+# 在这里体现为sum = 0，element则自动获取数组的第一个元素
 nums = [1,3,5,7]
 puts nums.inject(0){|sum, element| sum + element}
+puts nums.inject(1) {|product, element| product * element}
